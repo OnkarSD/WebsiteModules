@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>gsap</title>
+
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+      }
+      .header {
+        height: 15%;
+        background-color: brown;
+      }
+
+      .links {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 100%;
+        color: white;
+        font-size: 34px;
+      }
+
+      .footer {
+        transform: translateY(100%);
+        background-color: blue;
+        height: 15vh;
+      }
+
+      .sidebar {
+        background-color: green;
+        width: 15vw;
+      }
+
+      .btn {
+        align-self: center;
+      }
+
+      .content {
+        flex-grow: 1;
+        display: flex;
+        justify-content: space-between;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="links">
+        <div class="link">link 1</div>
+        <div class="link">link 2</div>
+        <div class="link">link 3</div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="sidebar left"></div>
+      <button class="btn">reverse</button>
+      <div class="sidebar right"></div>
+    </div>
+    <div class="footer"></div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+      integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
