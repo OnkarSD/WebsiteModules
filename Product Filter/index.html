@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<title>Product Filter</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<section>
+        <ul>
+            <li class="list active" data-filter="all">All</li>
+            <li class="list" data-filter="mobile">Mobile</li>
+            <li class="list" data-filter="camera">Camera</li>
+            <li class="list" data-filter="shoe">Shoe</li>
+            <li class="list" data-filter="watch">Watch</li>
+            <li class="list" data-filter="headphones">Headphones</li>
+        </ul>
+        <div class="product">
+            <div class="itemBox mobile"><img src="https://source.unsplash.com/300x400/?mobile,phones"></div>          
+            <div class="itemBox camera"><img src="https://source.unsplash.com/300x400/?camera"></div>         
+            <div class="itemBox shoe"><img src="https://source.unsplash.com/300x400/?shoes,nike"></div> 
+            <div class="itemBox watch"><img src="https://source.unsplash.com/300x400/?wrist,watch"></div> 
+            <div class="itemBox headphones"><img src="https://source.unsplash.com/300x400/?headset,apple"></div>
+            <div class="itemBox mobile"><img src="https://source.unsplash.com/300x400/?mobile,android"></div>              
+            <div class="itemBox shoe"><img src="https://source.unsplash.com/300x400/?shoe,brand"></div> 
+            <div class="itemBox watch"><img src="https://source.unsplash.com/300x400/?wrist,watch,rolex"></div> 
+            <div class="itemBox headphones"><img src="https://source.unsplash.com/300x400/?headphones,wireless"></div>
+            <div class="itemBox mobile"><img src="https://source.unsplash.com/300x400/?mobile,apple"></div>          
+            <div class="itemBox camera"><img src="https://source.unsplash.com/300x400/?camera,sony"></div>         
+            <div class="itemBox shoe"><img src="https://source.unsplash.com/300x400/?shoe,addidas"></div> 
+            <div class="itemBox mobile"><img src="https://source.unsplash.com/300x400/?mobile,brand"></div>          
+            <div class="itemBox camera"><img src="https://source.unsplash.com/300x400/?camera,new"></div>         
+            <div class="itemBox shoe"><img src="https://source.unsplash.com/300x400/?shoe,nike"></div> 
+            <div class="itemBox watch"><img src="https://source.unsplash.com/300x400/?watch,smart"></div> 
+        </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.list').click(function(){
+                const value = $(this).attr('data-filter');
+                if (value == 'all'){
+                    $('.itemBox').show('1000');
+                }
+                else{
+                    $('.itemBox').not('.'+value).hide('1000');
+                    $('.itemBox').filter('.'+value).show('1000');
+                }
+            })
+            
+            $('.list').click(function(){
+                $(this).addClass('active').siblings().removeClass('active');
+            })
+        })
+    </script>
+</body>
+</html
